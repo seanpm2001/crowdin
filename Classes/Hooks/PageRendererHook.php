@@ -23,9 +23,12 @@ class PageRendererHook
 {
     private const LANGUAGE_KEY = 't3';
 
+    private static $added = 0;
+
     public function run(array &$params): void
     {
         if ($this->isEnabled() && $projectIdentifier = $this->getProjectIdentifier()) {
+            self::$added++;
             $crowdinCode = '
                 <script type="text/javascript">
                       var _jipt = [];
@@ -39,7 +42,7 @@ class PageRendererHook
 
     protected function isEnabled(): bool
     {
-        return $this->getBackendUser()->uc['lang'] === self::LANGUAGE_KEY;
+        return self::$added === 0 && $this->getBackendUser()->uc['lang'] === self::LANGUAGE_KEY;
     }
 
     protected function getProjectIdentifier(): string
