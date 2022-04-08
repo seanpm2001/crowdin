@@ -9,9 +9,11 @@
 		"localization",
 		"translation"
 	],
-	"homepage": "https://github.com/FriendsOfTYPO3/crowdin",
+	"homepage": "https://extensions.typo3.org/extension/crowdin/",
 	"support": {
-		"issues": "https://github.com/FriendsOfTYPO3/crowdin/issues"
+		"issues": "https://github.com/FriendsOfTYPO3/crowdin/issues",
+		"source": "https://github.com/FriendsOfTYPO3/crowdin",
+		"docs": "https://docs.typo3.org/p/friendsoftypo3/crowdin/main/en-us/"
 	},
 	"authors": [
 		{
